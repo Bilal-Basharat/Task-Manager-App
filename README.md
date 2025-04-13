@@ -2,12 +2,12 @@
 A simple task management application built with Laravel, featuring drag-and-drop prioritization and project organization.
 
 ## Features
-✅ Create, edit, and delete tasks
-🏷️ Assign tasks to projects
-🔄 Drag-and-drop task prioritization
-🗂️ Filter tasks by project
-📊 Automatic priority management
-🎨 Clean, responsive Bootstrap UI
+✅ Create, edit, and delete tasks \
+🏷️ Assign tasks to projects \
+🔄 Drag-and-drop task prioritization \
+🗂️ Filter tasks by project \
+📊 Automatic priority management \
+🎨 Clean, responsive Bootstrap UI \
 
 ## Requirements
 PHP 8.0+
