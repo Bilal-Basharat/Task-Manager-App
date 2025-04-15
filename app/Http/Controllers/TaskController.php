@@ -20,14 +20,14 @@ class TaskController extends Controller
         ->orderBy('priority')
         ->get();
 
-        // $projects = Project::all();
+        $projects = Project::all();
 
         //API response
         if($request->wantsJson()){
             return response()->json([
                 'tasks' => $tasks,
-                // 'projects' => $projects,
-                // 'selectedProjectId' => $selectedProjectId
+                'projects' => $projects,
+                'selectedProjectId' => $selectedProjectId
             ]);
         }
          // Web response

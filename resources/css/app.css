@@ -1,4 +1,89 @@
 @import 'tailwindcss';
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
+/* @tailwind utilities; */
+
+/* Your custom CSS */
+@layer utilities {
+ /* Extra large gap */
+ .gap-x-15 {
+    column-gap: 3.75rem; /* 60px */
+  }
+  
+  /* Custom vertical padding */
+  .py-18 {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
+  }
+  /* Gradient text */
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+  }
+  
+  /* Multiline text truncation */
+  .truncate-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+   /* Bounce animation */
+   .animate-bounce-x {
+    animation: bounce-x 1s infinite;
+  }
+  
+  @keyframes bounce-x {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+  }
+  /* Task priority indicators */
+  .priority-high {
+    @apply bg-red-100 text-red-800 border-l-4 border-red-500;
+  }
+  
+  .priority-medium {
+    @apply bg-yellow-100 text-yellow-800 border-l-4 border-yellow-500;
+  }
+  
+  /* Drag handle */
+  .drag-handle {
+    @apply w-4 h-4 mr-2 bg-gray-300 rounded cursor-move;
+  }
+  @variants hover, focus, md {
+    .rotate-135 {
+      transform: rotate(135deg);
+    }
+  }
+   /* Task card utilities */
+   .task-card {
+    @apply bg-white rounded-lg shadow p-4 hover:shadow-md transition;
+  }
+  
+  /* Drag state */
+  .drag-ghost {
+    @apply opacity-50 bg-gray-100;
+  }
+  
+  /* Priority badges */
+  .priority-badge {
+    @apply text-xs font-semibold px-2.5 py-0.5 rounded;
+  }
+
+/* For the drag preview */
+.bg-gray-100 {
+    opacity: 0.5;
+    background-color: #f3f4f6;
+}
+
+/* For the drag handle (optional) */
+.drag-handle {
+    cursor: move;
+    padding: 0 10px;
+}
+}
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 @source '../../storage/framework/views/*.php';
