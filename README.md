@@ -27,33 +27,34 @@ composer install
 ### 3. Install JavaScript dependencies:
 npm install
 
-### 4. Configure your database in .env:
-DB_CONNECTION=mysql
-DB_HOST=127.0.0.1
-DB_PORT=3306
-DB_DATABASE= database_name
-DB_USERNAME= root
-DB_PASSWORD= setup_a_password
+### 4. Run the MySQL server and create the database there 
 
-### 5. Run migrations:
+### 5. Configure your database in .env:
+DB_CONNECTION=mysql \
+DB_HOST=127.0.0.1 \
+DB_PORT=3306 \
+DB_DATABASE= database_name (put the database name here which you have created on the MySQL server) \
+DB_USERNAME= root  \
+DB_PASSWORD= setup_a_password (if you want to setup the password then create on the MySQL server and put the password here)
+
+### 6. Run migrations (to create tables in the database):
 php artisan migrate
 
-### 6. Compile assets:
+### 7. Compile assets:
 npm run dev
 
-### 6. run in development environment:
-php artisan serve \
-npm run dev
-
-## Usage
+## Execution
 
 ### 1. Start the development server:
-php artisan serve
+#### Run the following commands on the console to execute the application:
+php artisan serve \
+npm run dev \
+Run MySQL Server
 
 ### 2. Access the application at:
 http://localhost:8000
 
 ## Acknowledgments
-Laravel community
-SortableJS developers
-All contributors
+Laravel community \
+SortableJS developers \
+All contributors 
